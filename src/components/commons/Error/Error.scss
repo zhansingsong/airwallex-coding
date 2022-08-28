@@ -7,13 +7,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .error-img {
   display: block;
   width: p2m(679);
   height: p2m(377);
-  margin-top: p2m(491);
   @extend %u-center;
 }
 
@@ -32,7 +32,6 @@
   height: p2m(377);
   align-items: center;
   justify-content: center;
-  margin-top: p2m(491);
   color: #9e9e9e;
   font-size: p2m(420);
 }
