@@ -70,3 +70,7 @@ src
 ├── types // ts 类型
 └── utils // 工具方法
 ```
+
+## 适配方案
+
+采用 vw + rem 适配方案： https://github.com/zhansingsong/vwrem
