@@ -1,0 +1,15 @@
+@use './config';
+@use 'sass:string';
+
+@mixin border($tb, $lr, $color: null) {
+  position: absolute;
+  z-index: 1;
+  width: 200%;
+  height: 1px;
+  background-color: if($color, string.unquote($color), config.$border-color);
+  content: '';
+  transform: scale(0.5);
+  transform-origin: left;
+  #{$tb}: 0;
+  #{$lr}: 0;
+}

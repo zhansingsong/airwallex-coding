@@ -1,0 +1,186 @@
+/* stylelint-disable */
+@use 'sass:map';
+@use 'sass:string';
+// https://www.webtips.dev/how-i-theme-my-react-app-with-sass
+$themes: (
+  // light
+  light:
+    (
+      color: #4c4c4c,
+      color1: #b6b6b6,
+      bg: #fff,
+      btn: #ff8162,
+      btn-color: #fff,
+      link-color: #64aced,
+      progress-color: #ff8162,
+      progress-bg: #707070,
+      progress-shadow: #cb2800,
+      popup-bg1: rgba(34, 34, 34, 0.97),
+      popup-top-menu-color1: #aba59a,
+      popup-top-menu-color2: #b6b6b6,
+      popup-top-menu-bg1: #161616,
+      popup-top-menu-bg2: #1c1c1c,
+      tabbtn-bg: rgba(0, 0, 0, 0.05),
+      sidebar-border: rgba(0, 0, 0, 0.1),
+      sidebar-color1: #aba59a,
+      bottombar-border1: #bbb,
+      bottombar-border2: #ededed,
+    ),
+  // light
+  light1:
+    (
+      color: #4c4c4c,
+      color1: #b6b6b6,
+      bg: #e8e5df,
+      btn: #ff8162,
+      btn-color: #fff,
+      link-color: #64aced,
+      progress-color: #ff8162,
+      progress-bg: #707070,
+      progress-shadow: #cb2800,
+      popup-bg1: rgba(34, 34, 34, 0.97),
+      popup-top-menu-color1: #aba59a,
+      popup-top-menu-color2: #b6b6b6,
+      popup-top-menu-bg1: #161616,
+      popup-top-menu-bg2: #1c1c1c,
+      tabbtn-bg: rgba(0, 0, 0, 0.05),
+      sidebar-border: rgba(0, 0, 0, 0.1),
+      sidebar-color1: #aba59a,
+      bottombar-border1: #bbb,
+      bottombar-border2: #ededed,
+    ),
+  // light
+  light2:
+    (
+      color: #4c4c4c,
+      color1: #b6b6b6,
+      bg: #e9d9bf,
+      btn: #ff8162,
+      btn-color: #fff,
+      link-color: #64aced,
+      progress-color: #ff8162,
+      progress-bg: #707070,
+      progress-shadow: #cb2800,
+      popup-bg1: rgba(34, 34, 34, 0.97),
+      popup-top-menu-color1: #aba59a,
+      popup-top-menu-color2: #b6b6b6,
+      popup-top-menu-bg1: #161616,
+      popup-top-menu-bg2: #1c1c1c,
+      tabbtn-bg: rgba(0, 0, 0, 0.05),
+      sidebar-border: rgba(0, 0, 0, 0.1),
+      sidebar-color1: #aba59a,
+      bottombar-border1: #bbb,
+      bottombar-border2: #ededed,
+    ),
+  // light
+  light3:
+    (
+      color: #4c4c4c,
+      color1: #b6b6b6,
+      bg: #bed0bf,
+      btn: #ff8162,
+      btn-color: #fff,
+      link-color: #64aced,
+      progress-color: #ff8162,
+      progress-bg: #707070,
+      progress-shadow: #cb2800,
+      popup-bg1: rgba(34, 34, 34, 0.97),
+      popup-top-menu-color1: #aba59a,
+      popup-top-menu-color2: #b6b6b6,
+      popup-top-menu-bg1: #161616,
+      popup-top-menu-bg2: #1c1c1c,
+      tabbtn-bg: rgba(0, 0, 0, 0.05),
+      sidebar-border: rgba(0, 0, 0, 0.1),
+      sidebar-color1: #aba59a,
+      bottombar-border1: #bbb,
+      bottombar-border2: #ededed,
+    ),
+  // light
+  light4:
+    (
+      color: #4c4c4c,
+      color1: #b6b6b6,
+      bg: #dfcee0,
+      btn: #ff8162,
+      btn-color: #fff,
+      link-color: #64aced,
+      progress-color: #ff8162,
+      progress-bg: #707070,
+      progress-shadow: #cb2800,
+      popup-bg1: rgba(34, 34, 34, 0.97),
+      popup-top-menu-color1: #aba59a,
+      popup-top-menu-color2: #b6b6b6,
+      popup-top-menu-bg1: #161616,
+      popup-top-menu-bg2: #1c1c1c,
+      tabbtn-bg: rgba(0, 0, 0, 0.05),
+      sidebar-border: rgba(0, 0, 0, 0.1),
+      sidebar-color1: #aba59a,
+      bottombar-border1: #bbb,
+      bottombar-border2: #ededed,
+    ),
+  // dark
+  dark:
+    (
+      color: #6b6b6b,
+      // color1: #909090,
+      color1: #6b6b6b,
+      bg: #191919,
+      btn: #7f4031,
+      btn-color: #7f7f7f,
+      link-color: #6b6b6b,
+      progress-color: #792b18,
+      progress-bg: #545454,
+      progress-shadow: #631806,
+      popup-bg1: rgba(17, 17, 17, 0.97),
+      popup-top-menu-color1: #6b6b6b,
+      popup-top-menu-color2: #6b6b6b,
+      popup-top-menu-bg1: #111111,
+      popup-top-menu-bg2: #0e0e0e,
+      tabbtn-bg: rgba(255, 255, 255, 0.03),
+      sidebar-border: #292929,
+      sidebar-color1: rgba(76, 76, 76, 0.6),
+      bottombar-border1: #545454,
+      bottombar-border2: #545454,
+    )
+);
+
+@mixin themifyInit($key, $color, $val: null, $transition: null) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} {
+      #{$key}: $val map.get(map.get($themes, $theme-name), $color);
+    }
+  }
+}
+
+@mixin themify($key, $color, $val: null, $transition: null) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      transition: if(
+        $transition != null,
+        string.unquote($key + ' 0.25s,') string.unquote($transition),
+        string.unquote($key) 0.25s
+      );
+      #{$key}: $val map.get(map.get($themes, $theme-name), $color);
+    }
+  }
+}
+@mixin themifySimple($key, $color, $val: null, $transition: null) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: $val map.get(map.get($themes, $theme-name), $color);
+    }
+  }
+}
+
+@mixin themifyReaderSkeleton($color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      $currentColor: map.get(map.get($themes, $theme-name), $color);
+      $currentColor1: if($theme-name == 'light', #eee, lighten($currentColor, 6%));
+      $currentColor2: if($theme-name == 'light', #f5f5f5, lighten($currentColor, 12%));
+      background-color: $currentColor1;
+      // stylelint-disable-next-line
+      background-image: linear-gradient(90deg, $currentColor1, $currentColor2, $currentColor1);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+
+  // box-sizing: border-box;
+  // padding-bottom: p2m(850);
+  .layout-hd,
+  .layout-ft {
+    position: relative;
+    width: 100%;
+  }
+
+  .layout-hd {
+    height: p2m(80);
+  }
+
+  .layout-bd {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .layout-ft {
+    height: p2m(100);
+  }
+}

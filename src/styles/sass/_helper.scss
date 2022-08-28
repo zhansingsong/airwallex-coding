@@ -1,0 +1,80 @@
+%u-cf:after {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  clear: both;
+  content: '.';
+  visibility: hidden;
+}
+
+%u-cf {
+  zoom: 1;
+}
+
+%u-ib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+%u-fl {
+  float: left;
+}
+
+%u-fr {
+  float: right;
+}
+
+%u-hide {
+  display: none;
+}
+
+%u-show {
+  display: block;
+}
+
+%u-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+%u-linebreak {
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+%u-indent {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+%u-text {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+%u-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%u-imgcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-height: 140%;
+  transform: translate(-50%, -50%);
+}
+// https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+%u-noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none;
+}

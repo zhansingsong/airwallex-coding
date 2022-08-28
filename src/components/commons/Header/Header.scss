@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid $border-color;
+  background-color: rgb(255 255 255);
+
+  .header-wp {
+    display: flex;
+    width: 10rem;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    padding-left: p2m(10);
+    font-size: p2m(32);
+    font-weight: 700;
+    line-height: p2m(32);
+  }
+}

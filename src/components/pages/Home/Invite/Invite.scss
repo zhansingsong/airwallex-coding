@@ -1,0 +1,126 @@
+.invite {
+  display: flex;
+  height: p2m(400);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: p2m(20);
+
+  &-r1,
+  &-r2 {
+    font-size: p2m(40);
+    font-weight: 700;
+  }
+
+  &-r3 {
+    margin-top: p2m(30);
+    color: $gray-2;
+  }
+
+  &-btn {
+    padding: p2m(10 20);
+    border: 1px solid $black;
+    margin-top: p2m(30);
+    background-color: $white;
+    border-radius: p2m(6);
+    color: $gray-2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      transition: all 0.1s;
+    }
+
+    .icon-plane {
+      font-size: p2m(22);
+    }
+  }
+
+  .alert-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input,
+    &-submit {
+      position: relative;
+      width: p2m(400);
+      height: p2m(50);
+      box-sizing: border-box;
+      border: 1px solid $gray-2;
+      border-radius: p2m(6);
+      font-size: p2m(20);
+    }
+
+    .input {
+      margin-bottom: p2m(10);
+
+      .iconfont {
+        position: absolute;
+        top: 50%;
+        left: p2m(10);
+        font-size: p2m(26);
+        transform: translateY(-50%);
+      }
+    }
+
+    input[type='text'] {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0 p2m(10) 0 p2m(50);
+      float: left;
+
+      &:focus {
+        // border-width: 2px;
+        border-color: $black;
+
+        // outline: solid $black;
+      }
+    }
+
+    .highlight {
+      border-color: $red-2;
+
+      // outline: solid $red-2 1px;
+    }
+
+    &-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: p2m(40);
+      background-color: $white;
+      color: $black;
+      cursor: pointer;
+
+      .svg {
+        width: p2m(30);
+        height: p2m(30);
+        margin: 0 0 0 p2m(10) !important;
+      }
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    .disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      &:hover {
+        background-color: $white;
+        color: $gray-2;
+      }
+    }
+
+    &-tip {
+      height: p2m(30);
+      color: $red-2;
+      font-size: p2m(20);
+    }
+  }
+}

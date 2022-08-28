@@ -1,0 +1,112 @@
+@use './function' as *;
+%box {
+  position: relative;
+}
+
+%box-1 {
+  overflow: hidden;
+  padding: 0 p2m(40);
+  margin-bottom: p2m(24);
+  background-color: #fff;
+}
+
+%box-2 {
+  overflow: hidden;
+  padding: 0 p2m(40);
+}
+
+%box-3 {
+  padding: p2m(40 40 100);
+}
+
+%box-mb-0 {
+  margin-bottom: 0;
+}
+%box-pt-40 {
+  padding-top: p2m(40);
+}
+%box-pb-12 {
+  padding-bottom: p2m(12);
+}
+%box-pb-24 {
+  padding-bottom: p2m(24);
+}
+
+%box-r {
+  // @extend %u-cf;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: p2m(-48);
+  // justify-content: space-between;
+}
+%box-c {
+  margin-right: p2m(48);
+}
+
+%grid {
+  position: relative;
+}
+%grid-h {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 200%;
+    background-color: #dedede;
+    content: '';
+    transform: translate(-25%, -25%) scale(0.5);
+  }
+}
+
+%grid-v {
+  &:after {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    width: 200%;
+    height: 1px;
+    background-color: #dedede;
+    content: '';
+    transform: translate(-25%, -25%) scale(0.5);
+  }
+}
+
+%grid-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%grid-col {
+  width: 50%;
+}
+
+%grid-1 {
+  margin-bottom: p2m(24);
+}
+
+%grid-2 {
+  background-color: #fff;
+}
+
+%grid-3 {
+  overflow: hidden;
+}
+
+%btn {
+  display: block;
+  height: p2m(130);
+  box-sizing: border-box;
+  border: 1px solid #ff8162;
+  background-color: #ff8162;
+  border-radius: p2m(12);
+  color: #fff;
+  font-size: p2m(48);
+  line-height: p2m(130);
+  text-align: center;
+  &:active {
+    border-color: #f25730;
+    background-color: #f25730;
+  }
+}
