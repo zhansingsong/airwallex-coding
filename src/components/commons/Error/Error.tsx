@@ -11,10 +11,10 @@ interface IBookListProps {
 const Error: FC<IBookListProps> = ({ errorTt = 404, errorImg, errorTxt }) => {
   return (
     <section className="error">
-      {errorImg && <img src={errorImg} className="err-img" alt="error img" />}
-      {errorTt && <div className="err-tt">{errorTt}</div>}
-      {errorTxt && <p className="err-des">{errorTxt}</p>}
-      <Link className="err-button" to={routerJump.Home()}>
+      {errorImg && <img src={errorImg} className="error-img" alt="error img" />}
+      {errorTt && <div className="error-tt">{errorTt}</div>}
+      {errorTxt && <p className="error-des">{errorTxt}</p>}
+      <Link className="error-button" to={routerJump.Home()}>
         返回首页
       </Link>
     </section>

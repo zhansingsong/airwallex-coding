@@ -2,6 +2,7 @@
 const APIs = {
   /**
    * 验证接口：`https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth`
+   *
    * @method POST
    * @type 请求类型：`"application/json"`
    * @param

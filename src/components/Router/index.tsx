@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { compile, PathFunction } from 'path-to-regexp';
 import Loading from '@/components/commons/Loading/Loading';
 import { BrowserRouter, Routes, Route, Navigate, PathRouteProps } from 'react-router-dom';
@@ -20,10 +20,6 @@ export const routerJump = Object.keys(routesConfig).reduce((preValue, curValue) 
 }, {} as RoutesConfigType);
 
 const RouterComponent = () => {
-  useEffect(() => {
-    // console.log('vv');
-  }, []);
-
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading></Loading>}>

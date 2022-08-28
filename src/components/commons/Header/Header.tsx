@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { routerJump } from '@/components/Router';
 import './Header.scss';
 
-const Header: FC = () => {
+const Header = () => {
   return (
     <header className="header">
       <div className="header-wp">

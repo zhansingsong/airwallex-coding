@@ -1,11 +1,9 @@
 import React from 'react';
-import classnames from 'classnames';
 import './Footer.scss';
 
 const Footer = () => {
-  const klass = classnames('footer');
   return (
-    <footer className={klass}>
+    <footer className="footer">
       <div className="footer-wp">
         <p>Made with ♥ in Melbourne.</p>
         <p>© 2022 Broccoli & Co. All rights reserved.</p>
