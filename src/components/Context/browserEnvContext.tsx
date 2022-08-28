@@ -41,7 +41,7 @@ function getEnv() {
     version = qs.version!;
     isClient = false;
   }
-  console.log('当前环境', currentEnv, version, isClient, window.location.href, UA);
+  // console.log('当前环境', currentEnv, version, isClient, window.location.href, UA);
   return {
     currentEnv,
     version,
