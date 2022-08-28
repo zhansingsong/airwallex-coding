@@ -8,8 +8,8 @@ import Invite from './Invite';
 jest.mock('axios', () => {
   return {
     __esModule: true,
+    // eslint-disable-next-line
     default: (agrs: any) => {
-      // eslint-disable-line
       return agrs.data.email === 'usedemail@airwallex.com'
         ? Promise.reject({
             response: { data: { errorMessage: 'Bad Request: Email is already in use' } }, // eslint-disable-line
